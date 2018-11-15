@@ -2,7 +2,7 @@
 title 拷贝 CGI 程序到Apache cgi-bin
 cls
 color 0A
-mode con cols=100 lines=30
+mode con cols=70 lines=30
 setlocal enabledelayedexpansion
 
 set configRoot=D:\BatWorks\CgiProgramConfig.txt
@@ -16,14 +16,14 @@ rem 菜单：循环调用直到退出
 :loop
 echo.
 echo.
-echo            ***********************************
-echo                          主菜单
-echo            ***********************************
-echo                    1.【添加 CGI 路径】
-echo                    2.【删除 CGI 路径】
-echo                    3.【拷贝 CGI 程序】
-echo                    4.【保存 CGI 路径】
-echo                    q.【退出】
+echo                 ***********************************
+echo                               主菜单
+echo                 ***********************************
+echo                         1.【添加 CGI 路径】
+echo                         2.【删除 CGI 路径】
+echo                         3.【拷贝 CGI 程序】
+echo                         4.【保存 CGI 路径】
+echo                         q.【退出】
 echo.
 
 set /p choice= 你的选择：
