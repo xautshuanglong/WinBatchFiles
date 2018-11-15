@@ -7,25 +7,25 @@ setlocal enabledelayedexpansion
 
 set configRoot=.\FileCopyToolConfig.txt
 
-set sourceRoot=E:\VS2013WORKS\
-set targetRoot="C:\Program Files (x86)\Apache Software Foundation\Apache2.2\cgi-bin"
+set sourceRoot=E:\ScriptWorks\
+set targetRoot="E:\ScriptWorks\"
 
 :: 定义GameArr
 call :Array GameArr
 call :readGamePath GameArr
-rem 菜单：循环调用直到退出
+rem 菜单：循环调用直到选择退出
 :loop
 echo.
 echo.
-echo                                  ***********************************
-echo                                                主菜单
-echo                                  ***********************************
-echo                                              1.【 拷贝 】
-echo                                              2.【 添加 】
-echo                                              3.【 删除 】
-echo                                              4.【 保存 】
-echo                                              5.【 清空 】
-echo                                              q.【 退出 】
+echo                                ***********************************
+echo                                              主菜单
+echo                                ***********************************
+echo                                            1.【 拷贝 】
+echo                                            2.【 添加 】
+echo                                            3.【 删除 】
+echo                                            4.【 保存 】
+echo                                            5.【 清空 】
+echo                                            q.【 退出 】
 echo.
 
 set /p choice= 你的选择：
