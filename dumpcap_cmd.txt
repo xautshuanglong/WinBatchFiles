@@ -1,0 +1,4 @@
+dumpcap -i 6 -f "ip dst 172.18.5.43 or ip src 172.18.5.43 and tcp port 5678" -w E:\Temp\WiresharkCaptureData\DICOM.pcapng -b filesize:100000 -b files:20
+
+
+dumpcap -i 6 -f "tcp port 5678" -w E:\Temp\WiresharkCaptureData\DICOM.pcapng -b filesize:100000 -b files:30
