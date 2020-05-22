@@ -1,0 +1,10 @@
+dumpcap -i 6 -f "ip dst 172.18.5.43 or ip src 172.18.5.43 and tcp port 5678" -w E:\Temp\WiresharkCaptureData\DICOM.pcapng -b filesize:100000 -b files:20
+
+
+dumpcap -i 6 -f "tcp port 5678" -w E:\Temp\WiresharkCaptureData\DICOM.pcapng -b filesize:100000 -b files:30
+
+
+参考网址：
+https://www.wireshark.org/docs/man-pages/dumpcap.html
+wireshark 命令行抓包    TTask
+
