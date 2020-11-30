@@ -1,1 +1,1 @@
-start "Code Signature Tool" /I init.bat
+start "Code Signature Tool" /I CodeSignatureTool_Initialize.bat
