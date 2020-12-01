@@ -1,4 +1,4 @@
-. .\CodeSignatureTool_TestEntry.ps1
+﻿. .\CodeSignatureTool_TestEntry.ps1
 . .\CodeSignatureTool_SignFunctions.ps1
 
 function PrintMenuTop
@@ -14,9 +14,11 @@ function PrintMenuTop
     Write-Host '╟┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╢'
     Write-Host '║                  02. 查看签名证书                        ║'
     Write-Host '╟┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╢'
-    Write-Host '║                  03. 开始签名                            ║'
+    Write-Host '║                  03. 导出签名证书                        ║'
     Write-Host '╟┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╢'
-    Write-Host '║                  04. 启动新控制台（管理员权限）          ║'
+    Write-Host '║                  04. 开始签名                            ║'
+    Write-Host '╟┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╢'
+    Write-Host '║                  05. 启动新控制台（管理员权限）          ║'
     Write-Host '╠══════════════════════════════════════════════════════════╣'
     Write-Host '║                  98. 测试入口                            ║'
     Write-Host '╟┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╢'
@@ -39,8 +41,9 @@ function ProcessMenuItem($inputSelectNum)
             00 { '拜拜！' }
             01 { MakeCodeCertificate }
             02 { ListCertificates }
-            03 { CallSignTool }
-            04 { StartPowerShellAdmin }
+            03 { ExportPfxCertificate }
+            04 { CallSignTool }
+            05 { StartPowerShellAdmin }
             98 { TestEntry }
             99 { InputUsernameAndPassword }
             default { Write-Host '无效选项 ...' -fore red }
@@ -48,6 +51,7 @@ function ProcessMenuItem($inputSelectNum)
     }
 }
 
+$env:Path += ';C:\Program Files (x86)\Windows Kits\10\bin\x64'
 do
 {
     PrintMenuTop

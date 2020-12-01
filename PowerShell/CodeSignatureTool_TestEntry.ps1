@@ -37,11 +37,6 @@ function TestEntry()
 # $valueName -is [int]
 # $valueName -as [int]
 
-function StartPowerShellAdmin
-{
-    Start-Process PowerShell -verb runas
-}
-
 function InputUsernameAndPassword
 {
     $username = Read-Host "What is your name"
@@ -49,6 +44,11 @@ function InputUsernameAndPassword
 
     $msg = $username + ':' + [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($password))
     $msg
+
+    $passwordCipherText = ConvertTo-SecureString -String TestPassword -Force -AsPlainText 
+    $passwordCipherText
+    $passwordPlainText = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($passwordCipherText))
+    $passwordPlainText
 }
 
 function TestFunctionWithParams($Parameter1='param1.vlue', $Parameter2='param2.value')

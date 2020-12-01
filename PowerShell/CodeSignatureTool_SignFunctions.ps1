@@ -1,4 +1,4 @@
-
+﻿
 function MakeCodeCertificate()
 {
     New-SelfSignedCertificate -Type Custom -Subject "E=xjshuanglong@126.com, CN=Shuanglong Code, O=Shuanglong, C=CN"`
@@ -12,12 +12,44 @@ function ListCertificates()
     Get-ChildItem Cert:CurrentUser\My -CodeSigningCert
 }
 
+function ExportPfxCertificate()
+{
+    $thumbprint = Read-Host "请输入整数指纹"
+    if ($thumbprint -eq '')
+    {
+        Write-Warning('输入的证书指纹无效 ...')
+        return
+    }
+    $certItem = Get-ChildItem Cert:\CurrentUser\My -CodeSigningCert | Where-Object {$_.Thumbprint -eq $thumbprint}
+    if ($certItem.Count -le 0)
+    {
+        Write-Warning '指定代码签名证书不存在 ...'
+        return
+    }
+    $password = Read-Host "请为私钥设置密码" -AsSecureString
+    $passwordVerify = Read-Host "请确认私钥密码" -AsSecureString
+
+    if ([Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringtoBSTR($password))`
+    -eq [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringtoBSTR($passwordVerify)))
+    {
+        Export-PfxCertificate -cert "Cert:\CurrentUser\My\$thumbprint" -FilePath ExportedSoftwareSignature.pfx -Password $password
+    }
+    else
+    {
+        Write-Warning '两次输入的密码不一致 ...'
+    }
+}
+
 function CallSignTool()
 {
     "Call SignTool.exe"
+    # SignTool sign /fd SHA26 /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.appx
 }
 
 function StartPowerShellAdmin
 {
-    Start-Process PowerShell -verb runas
+    $curLocation = Get-Location
+    # 非管理员权限启动 -WorkingDirectory 参数才有效
+    # Start-Process PowerShell -WorkingDirectory $curLocation -ArgumentList "-NoExit -File $curLocation\CodeSignatureTool_Initialize.ps1"
+    Start-Process PowerShell -verb runas -WorkingDirectory $curLocation -ArgumentList "-NoExit -File $curLocation\CodeSignatureTool_Initialize.ps1"
 }
