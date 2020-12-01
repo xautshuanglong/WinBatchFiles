@@ -3,44 +3,46 @@
 
 function PrintMenuTop
 {
-    Write-Host "¨X¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨["
-    Write-Host "¨U                     Ç©Ãû¹¤¾ß V1.0                        ¨U"
-    Write-Host "¨U                       2020-11-30                         ¨U"
-    Write-Host "¨d¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨g"
-    Write-Host "¨U                                                          ¨U"
-    Write-Host "¨U                  00. ÍË³ö                                ¨U"
-    Write-Host "¨c©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬¨f"
-    Write-Host "¨U                  01. ´´½¨Ç©ÃûÖ¤Êé                        ¨U"
-    Write-Host "¨c©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬¨f"
-    Write-Host "¨U                  02. ²é¿´Ç©ÃûÖ¤Êé                        ¨U"
-    Write-Host "¨c©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬¨f"
-    Write-Host "¨U                  03. ¿ªÊ¼Ç©Ãû                            ¨U"
-    Write-Host "¨d¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨g"
-    Write-Host "¨U                  98. ²âÊÔÈë¿Ú                            ¨U"
-    Write-Host "¨c©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬©¬¨f"
-    Write-Host "¨U                  99. ÓÃ»§ÃÜÂë²âÊÔ                        ¨U"
-    Write-Host "¨U                                                          ¨U"
-    Write-Host "¨^¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨a"
+    Write-Host 'â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—'
+    Write-Host 'â•‘                     ç­¾åå·¥å…· V1.0                        â•‘'
+    Write-Host 'â•‘                       2020-11-30                         â•‘'
+    Write-Host 'â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£'
+    Write-Host 'â•‘                                                          â•‘'
+    Write-Host 'â•‘                  00. é€€å‡º                                â•‘'
+    Write-Host 'â•Ÿâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ•¢'
+    Write-Host 'â•‘                  01. åˆ›å»ºç­¾åè¯ä¹¦                        â•‘'
+    Write-Host 'â•Ÿâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ•¢'
+    Write-Host 'â•‘                  02. æŸ¥çœ‹ç­¾åè¯ä¹¦                        â•‘'
+    Write-Host 'â•Ÿâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ•¢'
+    Write-Host 'â•‘                  03. å¼€å§‹ç­¾å                            â•‘'
+    Write-Host 'â•Ÿâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ•¢'
+    Write-Host 'â•‘                  04. å¯åŠ¨æ–°æ§åˆ¶å°ï¼ˆç®¡ç†å‘˜æƒé™ï¼‰          â•‘'
+    Write-Host 'â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£'
+    Write-Host 'â•‘                  98. æµ‹è¯•å…¥å£                            â•‘'
+    Write-Host 'â•Ÿâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ”ˆâ•¢'
+    Write-Host 'â•‘                  99. ç”¨æˆ·å¯†ç æµ‹è¯•                        â•‘'
+    Write-Host 'â•‘                                                          â•‘'
+    Write-Host 'â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•'
 }
 
 function ProcessMenuItem($inputSelectNum)
 {
     $selectNum = $inputSelectNum -as [int]
-    if ($inputSelectNum -eq "" -or $selectNum -eq $null)
+    if ($inputSelectNum -eq '' -or $null -eq $selectNum)
     {
-        Write-Host "Please input an integer value ..." -fore red
+        Write-Host 'Please input an integer value ...' -fore Yellow
     }
     else
     {
         switch($selectNum)
         {
-            00 { "Bye bye !" }
+            00 { 'Bye bye !' }
             01 { MakeCodeCertificate }
             02 { ListCertificates }
             03 { CallSignTool }
             98 { TestEntry }
             99 { InputUsernameAndPassword }
-            default { Write-Host "Invalid menu item ..." -fore red }
+            default { Write-Host 'Invalid menu item ...' -fore red }
         }
     }
 }
@@ -48,9 +50,6 @@ function ProcessMenuItem($inputSelectNum)
 do
 {
     PrintMenuTop
-    $selectNum = Read-Host "Input your choice"
+    $selectNum = Read-Host 'Input your choice'
     ProcessMenuItem($selectNum)
 } while($selectNum -ne 0)
-
-# "Press any key to continue ..."
-# $inputEmpty = [Console]::ReadLine()

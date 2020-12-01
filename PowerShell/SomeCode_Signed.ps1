@@ -1,4 +1,4 @@
-echo HelloWorld!
+Write-Output HelloWorld!
 
 # SIG # Begin signature block
 # MIIFdgYJKoZIhvcNAQcCoIIFZzCCBWMCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB

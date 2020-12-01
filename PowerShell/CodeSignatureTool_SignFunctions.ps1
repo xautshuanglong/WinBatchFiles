@@ -9,7 +9,7 @@ function MakeCodeCertificate()
 
 function ListCertificates()
 {
-    Dir Cert:CurrentUser\My -CodeSigningCert
+    Get-ChildItem Cert:CurrentUser\My -CodeSigningCert
 }
 
 function CallSignTool()
