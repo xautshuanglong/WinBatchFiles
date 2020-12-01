@@ -30,19 +30,20 @@ function ProcessMenuItem($inputSelectNum)
     $selectNum = $inputSelectNum -as [int]
     if ($inputSelectNum -eq '' -or $null -eq $selectNum)
     {
-        Write-Host 'Please input an integer value ...' -fore Yellow
+        Write-Host '请输入一个整型数字 ...' -fore Yellow
     }
     else
     {
         switch($selectNum)
         {
-            00 { 'Bye bye !' }
+            00 { '拜拜！' }
             01 { MakeCodeCertificate }
             02 { ListCertificates }
             03 { CallSignTool }
+            04 { StartPowerShellAdmin }
             98 { TestEntry }
             99 { InputUsernameAndPassword }
-            default { Write-Host 'Invalid menu item ...' -fore red }
+            default { Write-Host '无效选项 ...' -fore red }
         }
     }
 }
@@ -50,6 +51,6 @@ function ProcessMenuItem($inputSelectNum)
 do
 {
     PrintMenuTop
-    $selectNum = Read-Host 'Input your choice'
+    $selectNum = Read-Host '输入您的选择'
     ProcessMenuItem($selectNum)
 } while($selectNum -ne 0)
