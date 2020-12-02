@@ -1,4 +1,4 @@
-
+﻿
 # ┏━┳━┓
 # ┣━╋━┫
 # ┗━┻━┛
@@ -28,8 +28,11 @@
 
 function TestEntry()
 {
-    TestFunctionWithParams "xixi" "haha"
-    TestFunctionParamDeclaration a b
+    # TestFunction_WithParams "xixi" "haha"
+    # TestFunction_ParamDeclaration a b
+
+    $thumbprint = Read-Host "指定证书指纹"
+    TestFunction_FormateListCertificate $thumbprint
 }
 
 # 数据类型查看、判断、转换
@@ -51,12 +54,12 @@ function InputUsernameAndPassword
     $passwordPlainText
 }
 
-function TestFunctionWithParams($Parameter1='param1.vlue', $Parameter2='param2.value')
+function TestFunction_WithParams($Parameter1='param1.vlue', $Parameter2='param2.value')
 {
     "You entered $Parameter1 and $Parameter2!"
 }
 
-function TestFunctionParamDeclaration
+function TestFunctionz_ParamDeclaration
 {
     param(
         $aa,
@@ -71,4 +74,14 @@ function TestFunctionParamDeclaration
         $msg
     }
     #>
+}
+
+function TestFunction_FormateListCertificate
+{
+    param (
+        $thumbprint
+    )
+    
+    $certificate = Get-ChildItem Cert:\CurrentUser\My | Where-Object {$_.Thumbprint -eq $thumbprint}
+    $certificate | Format-List *
 }
