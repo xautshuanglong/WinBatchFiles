@@ -42,8 +42,9 @@ function ExportPfxCertificate()
 
 function CallSignTool()
 {
-    "Call SignTool.exe"
-    # SignTool sign /fd SHA26 /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.appx
+    $password = Read-Host "请输入私钥设置密码" -AsSecureString
+    $passwordPlain = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringtoBSTR($password))
+    signtool sign /v /fd SHA256 /p $passwordPlain /f ExportedSoftwareSignature.pfx /t http://timestamp.globalsign.com/scripts/timstamp.dll Server_V1.0.12.11195_Setup.msi
 }
 
 function StartPowerShellAdmin
