@@ -14,7 +14,7 @@ function ListCertificates()
 
 function ExportPfxCertificate()
 {
-    $thumbprint = Read-Host "请输入整数指纹"
+    $thumbprint = Read-Host "请输入证书指纹"
     if ($thumbprint -eq '')
     {
         Write-Warning('输入的证书指纹无效 ...')
@@ -43,8 +43,9 @@ function ExportPfxCertificate()
 function CallSignTool()
 {
     $password = Read-Host "请输入私钥设置密码" -AsSecureString
+    $codeFile = Read-Host "请输待签名代码文件"
     $passwordPlain = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringtoBSTR($password))
-    signtool sign /v /fd SHA256 /p $passwordPlain /f ExportedSoftwareSignature.pfx /t http://timestamp.globalsign.com/scripts/timstamp.dll Server_V1.0.12.11195_Setup.msi
+    signtool sign /v /fd SHA256 /p $passwordPlain /f ExportedSoftwareSignature.pfx /t http://timestamp.globalsign.com $codeFile
 }
 
 function StartPowerShellAdmin
